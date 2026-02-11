@@ -1,0 +1,8 @@
+"""Projectile Tracker by Group 5 for Dennis Moreno's EGR115 at ERAU Sping 2026"""
+
+import math
+
+launch_velocity = input("Enter intial launch velocity of projectile being launched:")
+launch_height = input("Enter initial launch height for projectile being launched:")
+launch_angle = input("Enter launch angle for projectile being launched (in degrees above horizontal):"
+
