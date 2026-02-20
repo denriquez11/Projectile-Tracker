@@ -1,8 +1,33 @@
 """Projectile Tracker by Group 5 for Dennis Moreno's EGR115 at ERAU Sping 2026"""
 
-import math
+print("Welcome to the Projectile Tracker! This program will calculate the time of flight, horizontal range, and maximum height of a projectile based on user input for launch velocity, launch height, and launch angle.")
 
-launch_velocity = input("Enter intial launch velocity of projectile being launched:")
+launch_velocity = input("Enter intial launch velocity of projectile being launched or type 'exit' to close program:")
 launch_height = input("Enter initial launch height for projectile being launched:")
-launch_angle = input("Enter launch angle for projectile being launched (in degrees above horizontal):"
+launch_angle = input("Enter launch angle for projectile being launched (in degrees above horizontal):")
 
+if launch_velocity == "exit" or launch_height == "exit" or launch_angle == "exit":
+    print("Exiting program...")
+    exit()
+elif not launch_velocity.isdigit() or not launch_height.isdigit() or not launch_angle.isdigit():
+    print("Invalid input. Please enter numeric values for velocity, height, and angle.")
+    exit()
+else:
+    launch_velocity = float(launch_velocity)
+    launch_height = float(launch_height)
+    launch_angle = float(launch_angle)
+
+    launch_angle_rad = math.radians(launch_angle) # Convert angle from degrees to radians
+    
+    g = 9.81  # acceleration due to gravity in m/s^2
+    time_of_flight = (2 * launch_velocity * math.sin(launch_angle_rad)) / g  # Calculate time of flight using the formula: t = (2 * v * sin(theta)) / g
+
+    horizontal_range = launch_velocity * math.cos(launch_angle_rad) * time_of_flight # Calculate horizontal range using the formula: R = v * cos(theta) * t
+
+    max_height = (launch_velocity ** 2 * math.sin(launch_angle_rad) ** 2) / (2 * g) # Calculate maximum height using the formula: H = (v^2 * sin^2(theta)) / (2 * g)
+
+plotpoints = []
+for i in range(0, int(horizontal_range) + 1): # Loop through x values from 0 to horizontal range
+    x =  i
+    y = (launch_velocity * math.sin(launch_angle_rad) * x) - (0.5 * g * x**2)
+    plotpoints.append((x, y))
