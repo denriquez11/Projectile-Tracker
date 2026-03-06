@@ -7,18 +7,18 @@ def projectile_setup():
     launch_angle = float(input("Enter launch angle for projectile being launched (in degrees above horizontal): "))
     return launch_velocity, launch_height, launch_angle
 
-  def nonlinear_trajectory(angle_deg, velocity, x):
+  def nonlinear_trajectory(angle_deg, velocity, x): #Created by Prof Moreno w/in class slides
     import math
     g = 9.81  # acceleration due to gravity in m/s^2
     y = x * math.tan(math.radians(angle_deg)) - (g * x**2) / (2 * velocity**2 * math.cos(math.radians(angle_deg))**2)
     return y
     
-def time_of_flight(launch_velocity, launch_height, launch_angle):
+def time_of_flight(launch_velocity, launch_height, launch_angle): # Created by Daniel Enriquez Calderon
     import math
     g = 9.81  # acceleration due to gravity in m/s^2
-    launch_angle_rad = math.radians(launch_angle)
-    time = (2 * launch_velocity * math.sin(launch_angle_rad)) / g
-    return time
+    launch_angle_rad = math.radians(launch_angle) #convert degree angle into radians 
+    time = (2 * launch_velocity * math.sin(launch_angle_rad)) / g #formula to solve for time
+    return time #in seconds (s)
     
 def horizontal_range(launch_velocity, launch_angle, time_of_flight):
     import math
