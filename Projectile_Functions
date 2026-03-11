@@ -2,9 +2,25 @@
 
 def projectile_setup():
     print("Welcome to the Projectile Tracker! This program will calculate the time of flight, horizontal range, and maximum height of a projectile based on user input for launch velocity, launch height, and launch angle.")
-    launch_velocity = float(input("Enter initial launch velocity of projectile being launched (in m/s): "))
-    launch_height = float(input("Enter initial launch height for projectile being launched (in meters): "))
-    launch_angle = float(input("Enter launch angle for projectile being launched (in degrees above horizontal): "))
+
+    while True:
+        try:
+            launch_velocity = float(input("Enter initial launch velocity of projectile being launched (in m/s): "))
+            break
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+    while True:
+        try:
+            launch_height = float(input("Enter initial launch height for projectile being launched (in meters): "))
+            break
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+    while True:
+        try:
+            launch_angle = float(input("Enter launch angle for projectile being launched (in degrees above horizontal): "))
+            break
+        except ValueError:
+            print("Invalid input. Please enter a number.")
     return launch_velocity, launch_height, launch_angle
 
 def nonlinear_trajectory(angle_deg, velocity, x, launch_height): #Created by Prof Moreno w/in class slides
