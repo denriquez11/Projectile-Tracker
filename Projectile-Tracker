@@ -3,7 +3,7 @@ import math
 import Projectile_Functions as pro12
 import matplotlib.pyplot as plt
 
-launch_velocity, launch_height, launch_angle = pro12.projectile_setup()
+launch_velocity, launch_height, launch_angle = pro12.projectile_setup() #runs custom function to gather user input data
 
 if launch_velocity == "exit" or launch_height == "exit" or launch_angle == "exit":  # Check if the user wants to exit the program
     print("Exiting program...")
@@ -16,13 +16,13 @@ else: #Continues Program if inputs are valid
     launch_height = float(launch_height)
     launch_angle = float(launch_angle)
 
-time_of_flight = pro12.time_of_flight(launch_velocity, launch_height, launch_angle)
-horizontal_range = pro12.horizontal_range(launch_velocity, launch_angle, time_of_flight)
-max_height = pro12.max_height(launch_velocity, launch_angle, launch_height)
+time_of_flight = pro12.time_of_flight(launch_velocity, launch_height, launch_angle) #runs fn to calculate tof
+horizontal_range = pro12.horizontal_range(launch_velocity, launch_angle, time_of_flight) #runs fn to calc range
+max_height = pro12.max_height(launch_velocity, launch_angle, launch_height) #runs fn to calc max height
+
 x = 0
 y = 0
-# Initialize an empty list for the X-coordinate
-# and the Y-coordinate of the projectile's trajectory
+
 plotpointsX = [x]
 plotpointsY = [y]
 plotpointsX.pop(0) # Removes unnecessary data points in the lists
