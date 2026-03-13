@@ -40,8 +40,8 @@ Projectile_Functions.py (the function library) contains these functions:
 ![Projectile Graph](Figure_1.png)
 
 ### User Inputs:
-- Velocity: 10.0 m/s
-- Launch Height: 0 m
+- Velocity: 43.5 m/s
+- Launch Height: 7 m
 - Launch Angle (degrees about the horizontal): 45°
 
 ## Physics Model
@@ -52,7 +52,9 @@ This project models projectile motion assuming:
 
 The trajectory is calculated by using this equation:
 
-![Trajectory Equation](https://latex.codecogs.com/png.image?\color{white}y%20=%20x\tan(\theta)%20-%20\frac{g%20x^2}{2v^2\cos^2(\theta)}%20+%20h)
+$$
+y = x \tan(\theta) - \frac{g x^2}{2 v^2 \cos^2(\theta)} + h
+$$
 
 Where:
 - v  = initial launch velocity
