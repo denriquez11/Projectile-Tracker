@@ -40,9 +40,9 @@ Projectile_Functions.py (the function library) contains these functions:
 ![Projectile Graph](Figure_1.png)
 
 ### User Inputs:
-- Velocity: 43.5 m/s
-- Launch Height: 7 m
-- Launch Angle (degrees about the horizontal): 30°
+- Velocity: 10.0 m/s
+- Launch Height: 0 m
+- Launch Angle (degrees about the horizontal): 45°
 
 ## Physics Model
 This project models projectile motion assuming:
