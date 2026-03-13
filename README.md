@@ -51,9 +51,7 @@ This project models projectile motion assuming:
 - Two dimensional motion
 
 The trajectory is calculated by using this equation:
-$$
-y = x\tan(\theta) - \frac{g x^2}{2 v^2 \cos^2(\theta)} + h
-$$
+![equation](https://latex.codecogs.com/png.image?\dpi{110}y=x\tan(\theta)-\frac{g x^2}{2v^2\cos^2(\theta)}+h)
 
 Where:
 - v  = initial launch velocity
