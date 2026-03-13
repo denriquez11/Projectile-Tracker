@@ -37,7 +37,7 @@ Projectile_Functions.py (the function library) contains these functions:
 
 ## Example Code Output
 ### Graph:
-![Projectile Graph](Example_Graph.png)
+![Projectile Graph](READMEGRAPH.png)
 
 ### User Inputs:
 - Velocity: 43.5 m/s
