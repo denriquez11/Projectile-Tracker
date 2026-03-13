@@ -52,7 +52,7 @@ This project models projectile motion assuming:
 
 The trajectory is calculated by using this equation:
 
-![Trajectory Equation](https://latex.codecogs.com/png.image?y%20=%20x\tan(\theta)%20-%20\frac{g%20x^2}{2%20v^2%20\cos^2(\theta)}%20+%20h)
+![Trajectory Equation](https://latex.codecogs.com/png.image?\color{white}y%20=%20x\tan(\theta)%20-%20\frac{g%20x^2}{2v^2\cos^2(\theta)}%20+%20h)
 
 Where:
 - v  = initial launch velocity
